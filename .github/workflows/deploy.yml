@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: clo835-final-project
+  ECR_REPOSITORY: clo835-final-live
 
 jobs:
   build:
