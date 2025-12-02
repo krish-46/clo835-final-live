@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee Information</title>
+    <style>
+        body {
+            /* Loads image from static/background.jpg */
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h3 { color: navy; font-family: avenir; }
+    </style>
+</head>
+<center>
+    <!-- Requirement: Name in Header -->
+    <h3>Final Project - Developed by: {{ name }}</h3>
+
+    <font color="black" size="4" style="font-family: avenir">
+        <h1 style="color: DodgerBlue">Employee Database</h1>
+        
+        <body>
+            <form action="/addemp" autocomplete="on" method="POST" enctype="multipart/form-data">
+                Employee ID:<br> <input style="height:25px;font-size:14pt; color:grey;" type="number" name="emp_id" autofocus size="40"><br><br>
+                First Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="first_name" ><br><br>
+                Last Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="last_name"><br><br>
+                Primary Skills:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="primary_skill"><br><br>
+                Location:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="location"><br><br>
+
+                <button type="submit" style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">UPDATE DATABASE</button><br><br>
+                <button type="submit" formaction="/getemp" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
+            </form>
+            <br><br>
+            <a href="/about">About Us</a>
+        </body>
+    </font>
+</center>
+</html>

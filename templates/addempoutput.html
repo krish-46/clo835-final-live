@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Emp Output</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<center>
+    <h3>Final Project - Developed by: {{ name }}</h3>
+    <font color="DodgerBlue" size="5" style="font-family: avenir">
+        <body>
+            <h1>The employee {{ emp_name }} was successfully added to the database</h1><br>
+            <a href="{{ url_for('home') }}">Back</a>
+        </body>
+    </font>
+</center>
+</html>

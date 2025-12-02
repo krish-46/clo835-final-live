@@ -1,0 +1,18 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: clo835-final-cluster
+  region: us-east-1
+
+# Use the existing LabRole so eksctl doesn't try to create a new one
+iam:
+  serviceRoleARN: "arn:aws:iam::381491880346:role/LabRole"
+
+managedNodeGroups:
+  - name: standard-workers
+    instanceType: t3.medium
+    desiredCapacity: 2
+    # Use LabRole for the worker nodes as well
+    iam:
+      instanceRoleARN: "arn:aws:iam::381491880346:role/LabRole"

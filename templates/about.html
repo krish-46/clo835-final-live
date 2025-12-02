@@ -1,0 +1,26 @@
+<!doctype html>
+<title>About Us</title>
+<head>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div style="color: #e4e4e4; text-align: center; height: 90px; vertical-align: middle;">
+        <!-- Requirement: Name in Header -->
+        <h3 style="color: black;">Final Project - Developed by: {{ name }}</h3>
+        
+        <h1>Hello From CLO835!</h1>
+        
+        {% if contents %}
+        <textarea rows="10" cols="50">{{ contents }}</textarea>
+        {% endif %}
+        
+        <br>
+        <a href="/">Go Home</a>
+    </div>
+</body>

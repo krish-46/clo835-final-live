@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: final
+data:
+  DBHOST: "mysql-service"
+  DBPORT: "3306"
+  DATABASE: "employees"
+  GROUP_NAME: "Group 8"
+  
+  S3_BUCKET: "clo835-group8-images-final" 
+  S3_IMAGE_KEY: "city.jpg"
+  AWS_REGION: "us-east-1"

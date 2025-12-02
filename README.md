@@ -1,1 +1,1 @@
-# clo835-final-live
+# CLO835 Final Project - Group 8
